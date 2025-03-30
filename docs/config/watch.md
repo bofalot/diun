@@ -130,3 +130,4 @@ events to [healthchecks.io](https://healthchecks.io/).
 
 * `baseURL`: Base URL for the Healthchecks Ping API (default `https://hc-ping.com/`).
 * `uuid`: UUID of an existing healthcheck (required).
+* `EnableFail`: Boolean for whether to Fail the healthcheck on application exit. Defaults to True.

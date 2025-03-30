@@ -52,6 +52,10 @@ func (di *Diun) HealthchecksFail(logs string) {
 		return
 	}
 
+	if !*di.cfg.Watch.Healthchecks.EnableFail {
+		return
+	}
+
 	if err := di.hc.Fail(context.Background(), gohealthchecks.PingingOptions{
 		UUID: di.cfg.Watch.Healthchecks.UUID,
 		Logs: logs,
